@@ -89,7 +89,7 @@ abstract class AbstractLogger{
         $this->logs['status_code'] = $response->status();
         $this->logs['response'] = $response->getContent();
         $this->logs['response_headers'] = $this->headers($response);
-        $this->logs['duration'] = number_format($endTime - LARAVEL_START, 3);
+        $this->logs['duration'] = number_format($endTime - \LARAVEL_START, 3);
         $this->logs['controller'] = $controller;
         $this->logs['action'] = $action;
         $this->logs['models'] = $models;
